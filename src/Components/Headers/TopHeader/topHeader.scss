@@ -1,0 +1,28 @@
+.top-header {
+  font-family: 'Poppins', sans-serif;
+  background-color: #c2c2af;
+  padding: 10px 20px;
+  width: 100%;
+
+  p {
+    text-align: center;
+    color: #333;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.5;
+  }
+
+  a {
+    color: #252525;
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
