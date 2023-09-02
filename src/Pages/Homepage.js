@@ -10,6 +10,7 @@ import dropsSectionImg from "../Assets/drops.webp";
 import "./homepage.scss";
 import StoreLocator from "../Components/StoreLocator/StoreLocator";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
+import Footer from "../Components/Footer/Footer";
 
 const Homepage = () => {
     return <div>
@@ -36,6 +37,7 @@ const Homepage = () => {
         />
         <StoreLocator/>
         <QuoteSection/>
+        <Footer/>
     </div>
 };
 
