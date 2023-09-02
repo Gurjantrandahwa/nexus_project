@@ -4,11 +4,11 @@
   font-family: 'Poppins', sans-serif;
 
   .footer-lists-wrapper {
-    padding: 50px 40px;
+    padding: 50px 35px;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
-    justify-content: space-around;
+
 
     a {
       color: #fffef2;
@@ -34,10 +34,6 @@
       flex-wrap: wrap;
       gap: 40px;
 
-      @media only screen and (min-width: 1400px) {
-        justify-content: space-between;
-
-      }
 
       .footer-text-wrapper {
         max-width: 40%;
@@ -103,14 +99,15 @@
         display: flex;
         margin-bottom: 20px;
         flex-wrap: wrap;
-        column-gap: 100px;
+        column-gap: 60px;
         row-gap: 30px;
 
         ul {
           display: flex;
           flex-direction: column;
           gap: 15px;
-          max-width: 200px;
+
+          align-items: start;
 
           li, a {
             font-size: 0.875rem;
@@ -130,7 +127,7 @@
   }
 
   .footer-line {
-    border-bottom: 3px solid;
+    border-bottom: 3px solid #fffef2 !important;
   }
 
   .footer-logo {

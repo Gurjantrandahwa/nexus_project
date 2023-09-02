@@ -11,7 +11,7 @@ import "./homepage.scss";
 import StoreLocator from "../Components/StoreLocator/StoreLocator";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
 import Footer from "../Components/Footer/Footer";
-import SectionCarousel from "../Components/Carousel/Carousel";
+
 
 const Homepage = () => {
     return <div>
@@ -19,7 +19,6 @@ const Homepage = () => {
         <ModalHeader/>
         <CustomNavbar/>
         <BannerSection/>
-        <SectionCarousel/>
         <BodyCare/>
         <CommonSection
             title={"The Athenaeum"}
