@@ -1,7 +1,7 @@
 import React from 'react';
 import TopHeader from "../Components/Headers/TopHeader/TopHeader";
 import ModalHeader from "../Components/Headers/ModalHeader/ModalHeader";
-import Navbar from "../Components/Navbar/Navbar";
+import CustomNavbar from "../Components/Navbar/CustomNavbar";
 import BannerSection from "../Components/BannerSection/BannerSection";
 import BodyCare from "../Components/BodyCare/BodyCare";
 import CommonSection from "../Components/CommonSection/CommonSection";
@@ -11,13 +11,15 @@ import "./homepage.scss";
 import StoreLocator from "../Components/StoreLocator/StoreLocator";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
 import Footer from "../Components/Footer/Footer";
+import SectionCarousel from "../Components/Carousel/Carousel";
 
 const Homepage = () => {
     return <div>
         <TopHeader/>
         <ModalHeader/>
-        <Navbar/>
+        <CustomNavbar/>
         <BannerSection/>
+        <SectionCarousel/>
         <BodyCare/>
         <CommonSection
             title={"The Athenaeum"}
@@ -38,6 +40,7 @@ const Homepage = () => {
         <StoreLocator/>
         <QuoteSection/>
         <Footer/>
+
     </div>
 };
 

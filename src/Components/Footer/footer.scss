@@ -34,6 +34,11 @@
       flex-wrap: wrap;
       gap: 40px;
 
+      @media only screen and (min-width: 1400px) {
+        justify-content: space-between;
+
+      }
+
       .footer-text-wrapper {
         max-width: 40%;
         @media only screen and (max-width: 1000px) {
@@ -97,7 +102,6 @@
       .lists {
         display: flex;
         margin-bottom: 20px;
-
         flex-wrap: wrap;
         column-gap: 100px;
         row-gap: 30px;
@@ -113,10 +117,11 @@
             display: flex;
             align-items: center;
             cursor: pointer;
+
           }
         }
 
-        svg{
+        svg {
           margin-left: 4px;
           font-size: 14px;
         }
@@ -124,15 +129,17 @@
     }
   }
 
-  .footer-line{
-border-bottom: 3px solid;
+  .footer-line {
+    border-bottom: 3px solid;
   }
-.footer-logo{
-  padding: 34px;
-  h3{
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7;
+
+  .footer-logo {
+    padding: 34px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
   }
-}
 }

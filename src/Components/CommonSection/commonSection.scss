@@ -12,7 +12,7 @@
 
   img {
     width: 60%;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1020px) {
       width: 100%;
       padding-left: 60px;
     }
@@ -26,6 +26,11 @@
   .section-text-wrapper {
     padding-left: 0;
     padding-right: 30px;
-
+    @media only screen and (max-width: 1020px) {
+      padding-left: 60px;
+    }
+  }
+  @media only screen and (max-width: 1020px) {
+    flex-direction: column-reverse!important;
   }
 }
