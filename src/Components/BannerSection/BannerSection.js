@@ -2,13 +2,15 @@ import React from 'react';
 import "./bannerSection.scss";
 import bannerImage from "../../Assets/banner.webp";
 import {BsArrowRightShort} from "react-icons/bs";
+import logoImg from "../../Assets/logo.png";
+
 
 const BannerSection = () => {
     return <section className={"banner-section"}>
         <img src={bannerImage} alt={"banner"}/>
         <div className={"banner-text-wrapper"}>
             <a href={"/"}>
-                <img src={""} alt={"logo"}/>
+                <img src={logoImg} alt={"logo"}/>
             </a>
             <div>
                 <h3> Bar Soaps</h3>

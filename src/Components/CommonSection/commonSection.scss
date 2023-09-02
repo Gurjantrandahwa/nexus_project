@@ -1,0 +1,31 @@
+.section-container {
+  padding-top: 150px;
+  display: flex;
+  width: 100%;
+  column-gap: 100px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 50px;
+  flex-direction: row;
+
+
+
+  img {
+    width: 60%;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      padding-left: 60px;
+    }
+  }
+}
+
+// second section styles
+.second-section {
+  flex-direction: row-reverse !important;
+
+  .section-text-wrapper {
+    padding-left: 0;
+    padding-right: 30px;
+
+  }
+}
