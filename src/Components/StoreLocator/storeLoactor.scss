@@ -1,3 +1,20 @@
-.store-locator{
+.store-locator {
   padding-top: 150px;
+  display: flex;
+  align-items: start;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+row-gap: 30px;
+
+  .store-carousel {
+    width: 60%;
+    @media only screen and (max-width: 1020px) {
+      width: 100%;
+      padding: 40px;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }

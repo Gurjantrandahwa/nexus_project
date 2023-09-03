@@ -11,6 +11,7 @@ import "./homepage.scss";
 import StoreLocator from "../Components/StoreLocator/StoreLocator";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
 import Footer from "../Components/Footer/Footer";
+import SkinCare from "../Components/SkinCare/SkinCare";
 
 
 const Homepage = () => {
@@ -27,6 +28,8 @@ const Homepage = () => {
             button={"Read more"}
             image={warmSectionImg}
         />
+
+        <SkinCare/>
         <CommonSection
             subTitle={"Post-Poo Drops has returned"}
             description={"\n" +
