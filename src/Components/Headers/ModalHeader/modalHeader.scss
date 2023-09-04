@@ -1,4 +1,4 @@
-.modal-header {
+.modal-top-header {
   background-color: #252525;
   padding: 12px 20px 8px;
   font-family: 'Poppins', sans-serif;
@@ -9,8 +9,8 @@
 
   @media only screen and (max-width: 1020px) {
     justify-content: space-between;
-   text-align: left;
-
+    text-align: left;
+    padding: 12px 10px 8px;
   }
 
   button {
@@ -27,6 +27,7 @@
       border-bottom: 1px solid #fffef2;
       transition: all 0.3s ease-in-out;
     }
+
     @media only screen and (max-width: 1020px) {
       text-align: left;
     }

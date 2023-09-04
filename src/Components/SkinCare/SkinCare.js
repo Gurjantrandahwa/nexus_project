@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import Carousel from "react-grid-carousel";
+import React from 'react';
 import {BsArrowRightShort} from "react-icons/bs";
 import skin1 from "../../Assets/skin1.png";
 import skin2 from "../../Assets/skin2.webp";
@@ -10,6 +9,7 @@ import skin6 from "../../Assets/skin6.webp";
 import skin7 from "../../Assets/skin7.webp";
 import skin8 from "../../Assets/skin8.webp";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import Carousel from 'react-bootstrap/Carousel';
 
 const skinData = [
     {
@@ -55,17 +55,8 @@ const skinData = [
 ];
 
 const SkinCare = () => {
-    const [currentPage, setCurrentPage] = useState(0);
-
-    const handlePageChange = (newPage) => {
-        console.log("Page changed to", newPage);
-        setCurrentPage(newPage);
-    };
-
     return <section className="carousel-container">
-        <Carousel className="b-care-wrapper" cols={3} rows={1}
-                  onPageChange={(page) => handlePageChange(page)}
-        >
+        <Carousel className="b-care-wrapper">
             <Carousel.Item>
                 <h3>For the skin</h3>
                 <h2 className="sub-title">Attention for all types</h2>
@@ -88,7 +79,6 @@ const SkinCare = () => {
                 </Carousel.Item>
             ))}
         </Carousel>
-        <ProgressBar currentPage={currentPage} totalPages={skinData.length}/>
     </section>
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {BsArrowRightShort} from "react-icons/bs";
+import Carousel from 'react-bootstrap/Carousel';
 import "./storeLoactor.scss";
-import Carousel from 'react-grid-carousel';
 import store1 from "../../Assets/store1.webp";
 import store2 from "../../Assets/store2.webp";
 import store3 from "../../Assets/store3.jpg";
@@ -15,7 +15,7 @@ const StoreLocator = () => {
             </button>
         </div>
         <div className={"store-carousel"}>
-            <Carousel cols={1} rows={1} >
+            <Carousel>
                 <Carousel.Item>
                     <img  src={store1} alt={"store1"} />
                 </Carousel.Item>

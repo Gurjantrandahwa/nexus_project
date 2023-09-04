@@ -85,17 +85,18 @@
 }
 
 .banner-nav {
-  position: absolute;
+  //position: absolute;
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background-color:#afa274;
 
   img {
     width: 100px;
     height: 40px;
     object-fit: cover;
+
   }
 
   ul {
@@ -105,12 +106,13 @@
 
 
     li {
-      color: #fff !important;
+      color: #333 !important;
       font-size: 17px;
       font-family: 'Poppins', sans-serif;
 
       svg {
         margin-top: 5px;
+        cursor: pointer;
       }
     }
   }

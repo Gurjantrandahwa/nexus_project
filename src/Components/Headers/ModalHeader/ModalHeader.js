@@ -4,7 +4,7 @@ import {MdAdd} from "react-icons/md";
 
 
 const ModalHeader = () => {
-    return <div className={"modal-header"}>
+    return <div className={"modal-top-header"}>
         <button>
             Click and&nbsp;Collect is now available at Hong Kong stores. Enjoy complimentary shipping on orders over
             HK$400

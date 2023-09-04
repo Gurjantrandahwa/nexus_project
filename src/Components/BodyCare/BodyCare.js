@@ -1,25 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./bodyCare.scss";
 import {BsArrowRightShort} from "react-icons/bs";
-import Carousel from "react-grid-carousel";
+import Carousel from 'react-bootstrap/Carousel';
 import soap1 from "../../Assets/soap1.webp";
 import soap2 from "../../Assets/soap2.webp";
 import soap3 from "../../Assets/soap3.webp";
-import ProgressBar from "../ProgressBar/ProgressBar";
 
 const BodyCare = () => {
-    const [currentPage, setCurrentPage] = useState(0);
 
-    const handlePageChange = (newPage) => {
-        setCurrentPage(newPage);
-    };
     const soapItems = [
         {imgSrc: soap1, title: 'Nurture Bar Soap', description: 'Offers a mild yet effective cleanse'},
         {imgSrc: soap2, title: 'Polish Bar Soap', description: 'Offers a thorough and enlivening cleanse'},
         {imgSrc: soap3, title: 'Refresh Bar Soap', description: 'Offers a mild yet effective cleanse'},
     ];
+
+
     return <section className="carousel-container">
-        <Carousel cols={2} rows={1} onPageChange={handlePageChange}>
+        <Carousel>
             <Carousel.Item>
                 <h3>For the body</h3>
                 <h2 className="sub-title">An expression of care</h2>
@@ -43,7 +40,7 @@ const BodyCare = () => {
             ))}
         </Carousel>
 
-        <ProgressBar currentPage={currentPage} totalPages={soapItems.length}/>
+
     </section>
 };
 
