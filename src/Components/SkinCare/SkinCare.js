@@ -8,7 +8,6 @@ import skin5 from "../../Assets/skin5.webp";
 import skin6 from "../../Assets/skin6.webp";
 import skin7 from "../../Assets/skin7.webp";
 import skin8 from "../../Assets/skin8.webp";
-import ProgressBar from "../ProgressBar/ProgressBar";
 import Carousel from 'react-bootstrap/Carousel';
 
 const skinData = [
