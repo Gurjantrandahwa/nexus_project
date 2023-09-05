@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {BsArrowRightShort} from "react-icons/bs";
 import skin1 from "../../Assets/skin1.png";
 import skin2 from "../../Assets/skin2.webp";
@@ -8,8 +8,8 @@ import skin5 from "../../Assets/skin5.webp";
 import skin6 from "../../Assets/skin6.webp";
 import skin7 from "../../Assets/skin7.webp";
 import skin8 from "../../Assets/skin8.webp";
-import Carousel from 'react-bootstrap/Carousel';
-
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
+import Slider from "react-slick";
 const skinData = [
     {
         image: skin1,
@@ -53,10 +53,72 @@ const skinData = [
     },
 ];
 
+
 const SkinCare = () => {
+
+    const [progress, setProgress] = useState(0);
+    const [slideToShow, setSlideToShow] = useState(4);
+
+    const setSlides = () => {
+        if (window.innerWidth <= 1280 && window.innerWidth > 1000) {
+            setSlideToShow(3)
+        } else if (window.innerWidth <= 1000 && window.innerWidth > 650) {
+            setSlideToShow(3)
+        } else if (window.innerWidth <= 650) {
+            setSlideToShow(1)
+        }
+
+    }
+
+    useEffect(() => {
+        setSlides();
+        setProgress(100 / skinData.length - slideToShow + 1);
+
+        window.addEventListener("resize",()=>{setSlides()})
+    }, [])
+
+
+    const settings = {
+        arrows: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: <AiOutlineArrowRight
+            onClick={onclick}
+        />,
+        prevArrow: <AiOutlineArrowLeft
+            onClick={onclick}
+        />,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ],
+
+        afterChange: current => {
+            setProgress(100 / (skinData.length - slideToShow + 1) * (current + 1));
+        }
+    };
+
     return <section className="carousel-container">
-        <Carousel className="b-care-wrapper">
-            <Carousel.Item>
+         <Slider {...settings}>
+            <div>
                 <h3>For the skin</h3>
                 <h2 className="sub-title">Attention for all types</h2>
                 <p>
@@ -66,18 +128,23 @@ const SkinCare = () => {
                 <button>
                     See all Skin Care <BsArrowRightShort/>
                 </button>
-            </Carousel.Item>
+            </div>
 
             {skinData.map((item, index) => (
-                <Carousel.Item key={index}>
+                <div key={index}>
                     <img src={item.image} alt={item.title} className="skin-care-img"/>
                     <div className="skin-text-wrapper">
                         <h3 className="skin-title">{item.title}</h3>
                         <p>{item.description}</p>
                     </div>
-                </Carousel.Item>
+                </div>
             ))}
-        </Carousel>
+        </Slider>
+
+        <div className={"progress-line"}>
+            <div className={"line"} style={{width: `${progress}%`}}/>
+
+        </div>
     </section>
 };
 
