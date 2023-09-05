@@ -24,7 +24,7 @@ const CustomNavbar = () => {
 
     return <>
         {!isResponsiveNavbarVisible && (
-            <Navbar className={"navbar"}>
+            <Navbar className={"navbar"} expand="lg" fixed={"sticky"} >
                 <ul>
                     <li>Skin Care</li>
                     <li>Body & Hand</li>

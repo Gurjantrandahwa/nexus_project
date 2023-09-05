@@ -6,7 +6,7 @@
   align-items: center;
   margin: auto;
   justify-content: center;
-
+  transition:all;
   @media only screen and (max-width: 1020px) {
     justify-content: space-between;
     text-align: left;
@@ -21,11 +21,11 @@
     color: #fffef2;
     border: none;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition:all;
 
     &:hover {
       border-bottom: 1px solid #fffef2;
-      transition: all 0.3s ease-in-out;
+      transition: all;
     }
 
     @media only screen and (max-width: 1020px) {
